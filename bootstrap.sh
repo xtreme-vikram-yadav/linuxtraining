@@ -5,16 +5,16 @@ install_go() {
 	local tmpdir=$(mktemp -d)
 
 	mkdir -p $tmpdir
-	pushd $tmpdir
-		wget $go_url
-		sudo tar -C /usr/local -xzf go*.tar.gz
+	pushd $tmpdir > /dev/null 2&>1
+		wget $go_url > /dev/null 2>&1
+		sudo tar -C /usr/local -xzf go*.tar.gz > /dev/null 2&>1
 		echo 'export PATH=$PATH:/usr/local/go/bin' >> $HOME/.profile
-	popd
+	popd > /dev/null 2&>1
 	rm -r $tmpdir
 }
 
-apt-get update
-apt-get install -y build-essential
-apt-get install -y libseccomp-dev libcap-dev
+sudo apt-get update > /dev/null 2&>1
+sudo apt-get install -y build-essential > /dev/null 2&>1
+sudo apt-get install -y libseccomp-dev libcap-dev > /dev/null 2&>1
 
 install_go
