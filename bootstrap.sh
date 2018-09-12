@@ -13,8 +13,8 @@ install_go() {
 	rm -r $tmpdir
 }
 
-sudo apt-get update > /dev/null 2&>1
-sudo apt-get install -y build-essential > /dev/null 2&>1
-sudo apt-get install -y libseccomp-dev libcap-dev > /dev/null 2&>1
+sudo apt-get update
+sudo apt-get install -y build-essential
+sudo apt-get install -y libseccomp-dev libcap-dev
 
 install_go
