@@ -7,7 +7,7 @@ install_go() {
 	mkdir -p $tmpdir
 	pushd $tmpdir > /dev/null 2&>1
 		wget $go_url > /dev/null 2>&1
-		sudo tar -C /usr/local -xzf go*.tar.gz > /dev/null 2&>1
+		sudo tar -C /usr/local -xzf go*.tar.gz
 		echo 'export PATH=$PATH:/usr/local/go/bin' >> $HOME/.profile
 	popd > /dev/null 2&>1
 	rm -r $tmpdir
