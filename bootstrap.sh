@@ -15,7 +15,7 @@ install_go() {
 
 sudo apt-get update
 sudo apt-get install -y build-essential
-sudo apt-get install -y libseccomp-dev libcap-dev libacl1-dev libselinux-dev
+sudo apt-get install -y libseccomp-dev libcap-dev libacl1-dev libselinux-dev moreutils
 cd ~
 wget http://man7.org/lsp/course-files-2018-09-17-pivotal.tar.gz > /dev/null 2>&1
 
